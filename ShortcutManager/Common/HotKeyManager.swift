@@ -13,9 +13,10 @@ class HotKeyManager: NSObject {
     static let shared = HotKeyManager()
     
     public func registerHotKey(shortcutView:MASShortcutView, path:URL, appName:String) {
-        let associatedKey:String = appName.replacingOccurrences(of: " ", with: "-")
-        shortcutView.associatedUserDefaultsKey = associatedKey
-        MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: associatedKey, toAction: {
+        let associatedKey:String = appName.replacingOccurrences(of: " ", with: "")
+        let arr_key = associatedKey.components(separatedBy: ".")
+        shortcutView.associatedUserDefaultsKey = arr_key[0]
+        MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: arr_key[0], toAction: {
             NSWorkspace.shared.open(path)
         })
     }

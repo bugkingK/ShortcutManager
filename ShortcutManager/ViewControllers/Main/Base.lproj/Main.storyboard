@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -831,18 +832,40 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="sTh-gi-VM9">
                                 <rect key="frame" x="0.0" y="629" width="510" height="50"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pZh-Y4-uLL">
-                                        <rect key="frame" x="194" y="13" width="123" height="24"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Applications" id="rwi-Qv-PhR">
-                                            <font key="font" metaFont="systemBold" size="20"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="VlN-R1-Xmx">
+                                        <rect key="frame" x="155" y="13" width="200" height="25"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OO3-Yo-cG3">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="D3s-lX-GK7"/>
+                                                    <constraint firstAttribute="height" constant="25" id="zNu-dp-2ar"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="np1-cx-9lX"/>
+                                            </imageView>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pZh-Y4-uLL">
+                                                <rect key="frame" x="28" y="0.0" width="174" height="25"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Shortcut Manager" id="rwi-Qv-PhR">
+                                                    <font key="font" metaFont="systemBold" size="20"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pZh-Y4-uLL" secondAttribute="trailing" id="Emn-Td-yTP"/>
+                                            <constraint firstItem="pZh-Y4-uLL" firstAttribute="leading" secondItem="OO3-Yo-cG3" secondAttribute="trailing" constant="5" id="EtL-Eb-D6I"/>
+                                            <constraint firstItem="OO3-Yo-cG3" firstAttribute="top" secondItem="VlN-R1-Xmx" secondAttribute="top" id="bju-N5-UGi"/>
+                                            <constraint firstItem="pZh-Y4-uLL" firstAttribute="top" secondItem="VlN-R1-Xmx" secondAttribute="top" id="cM2-HV-zlJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="OO3-Yo-cG3" secondAttribute="bottom" id="r7I-ME-7gv"/>
+                                            <constraint firstItem="OO3-Yo-cG3" firstAttribute="leading" secondItem="VlN-R1-Xmx" secondAttribute="leading" id="wdw-qF-Ynt"/>
+                                            <constraint firstAttribute="bottom" secondItem="pZh-Y4-uLL" secondAttribute="bottom" id="xmj-Ow-dqb"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="pZh-Y4-uLL" firstAttribute="centerY" secondItem="sTh-gi-VM9" secondAttribute="centerY" id="JXh-5f-pMl"/>
-                                    <constraint firstItem="pZh-Y4-uLL" firstAttribute="centerX" secondItem="sTh-gi-VM9" secondAttribute="centerX" id="Tq4-4S-06X"/>
+                                    <constraint firstItem="VlN-R1-Xmx" firstAttribute="centerY" secondItem="sTh-gi-VM9" secondAttribute="centerY" id="iGW-PG-hK2"/>
+                                    <constraint firstItem="VlN-R1-Xmx" firstAttribute="centerX" secondItem="sTh-gi-VM9" secondAttribute="centerX" id="nTk-3V-NZV"/>
                                     <constraint firstAttribute="height" constant="50" id="uiL-3r-nPB"/>
                                 </constraints>
                             </customView>
@@ -872,5 +895,6 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSApplicationIcon" width="32" height="32"/>
     </resources>
 </document>

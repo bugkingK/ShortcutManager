@@ -31,15 +31,12 @@ class PopoverController: NSObject {
         let menu = NSMenu()
         let arr_items = [
             NSMenuItem(title: "Welcome", action: #selector(onWelcome), keyEquivalent: ""),
-            NSMenuItem.separator(),
             NSMenuItem(title: "About", action: #selector(onAbout), keyEquivalent: ""),
             NSMenuItem.separator(),
+            NSMenuItem(title: "Open ShortcutManager", action: #selector(openApp), keyEquivalent: ""),
             NSMenuItem(title: "Auto-Login", action: #selector(onAutoLogin(_:)), keyEquivalent: ""),
             NSMenuItem.separator(),
-            NSMenuItem(title: "Open ShortcutManager", action: #selector(openApp), keyEquivalent: ""),
-            NSMenuItem.separator(),
             NSMenuItem(title: "Quit", action: #selector(onQuit), keyEquivalent: ""),
-            NSMenuItem.separator()
         ]
         
         arr_items[4].state = AutoLogin.enabled ? .on : .off

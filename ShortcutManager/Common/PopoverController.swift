@@ -30,6 +30,8 @@ class PopoverController: NSObject {
         
         let menu = NSMenu()
         let arr_items = [
+            NSMenuItem(title: "About", action: #selector(onAbout), keyEquivalent: ""),
+            NSMenuItem.separator(),
             NSMenuItem(title: "Open ShortcutManager", action: #selector(openApp), keyEquivalent: ""),
             NSMenuItem.separator(),
             NSMenuItem(title: "Quit", action: #selector(onQuit), keyEquivalent: ""),
@@ -42,6 +44,15 @@ class PopoverController: NSObject {
         }
         
         self.statusItem.menu = menu
+    }
+    
+    @objc private func onAbout() {
+        guard let vc = NSStoryboard.init(name: "Settings", bundle: nil).instantiateController(withIdentifier: "Settings_About") as? Settings_About else {
+            return
+        }
+        
+        let windowVC = NSWindowController(window: NSWindow(contentViewController: vc))
+        windowVC.showWindow(self)
     }
     
     @objc private func onQuit() {

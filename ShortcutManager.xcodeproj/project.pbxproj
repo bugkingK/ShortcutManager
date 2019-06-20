@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6415901FB3376BF198B40D95 /* Pods_ShortcutManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A82CC2C4F97DE5D1D8366A0 /* Pods_ShortcutManager.framework */; };
 		8513629322BA87D900FA8760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513629222BA87D900FA8760 /* AppDelegate.swift */; };
 		8513629722BA87DA00FA8760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8513629622BA87DA00FA8760 /* Assets.xcassets */; };
 		8513629A22BA87DA00FA8760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8513629822BA87DA00FA8760 /* Main.storyboard */; };
@@ -31,7 +32,6 @@
 		D20C541C22BB5B0A004FA266 /* NSDraggingInfo+FilePathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C541A22BB5B0A004FA266 /* NSDraggingInfo+FilePathURL.swift */; };
 		D20C542022BB5F6B004FA266 /* CTWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C541F22BB5F6B004FA266 /* CTWindowViewController.swift */; };
 		D20C542222BB662F004FA266 /* Main_AppPlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C542122BB662F004FA266 /* Main_AppPlusVC.swift */; };
-		FD5B7FE88D7BECD242E37F73 /* Pods_ShortcutManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626A46D5C7F3B43BCCD72D41 /* Pods_ShortcutManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,8 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6171D401A8C20E1931988D71 /* Pods-ShortcutManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortcutManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager.debug.xcconfig"; sourceTree = "<group>"; };
-		626A46D5C7F3B43BCCD72D41 /* Pods_ShortcutManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShortcutManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A82CC2C4F97DE5D1D8366A0 /* Pods_ShortcutManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShortcutManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7105E2B838AB720EBC5EE111 /* Pods-ShortcutManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortcutManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager.debug.xcconfig"; sourceTree = "<group>"; };
 		8513628F22BA87D900FA8760 /* ShortcutManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortcutManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8513629222BA87D900FA8760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8513629622BA87DA00FA8760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +59,7 @@
 		851362A822BA891200FA8760 /* Main_AppListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_AppListVC.swift; sourceTree = "<group>"; };
 		851362AA22BA893300FA8760 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 		851362AC22BA8B1400FA8760 /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyManager.swift; sourceTree = "<group>"; };
+		C46CF513A13B942BFD04C12B /* Pods-ShortcutManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortcutManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager.release.xcconfig"; sourceTree = "<group>"; };
 		D20C53EA22BB2A1A004FA266 /* PopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
 		D20C53ED22BB35BB004FA266 /* Settings_Left.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Left.swift; sourceTree = "<group>"; };
 		D20C53EE22BB35BB004FA266 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		D20C541A22BB5B0A004FA266 /* NSDraggingInfo+FilePathURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDraggingInfo+FilePathURL.swift"; sourceTree = "<group>"; };
 		D20C541F22BB5F6B004FA266 /* CTWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTWindowViewController.swift; sourceTree = "<group>"; };
 		D20C542122BB662F004FA266 /* Main_AppPlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_AppPlusVC.swift; sourceTree = "<group>"; };
-		EED558E22F5BA0716A316ED7 /* Pods-ShortcutManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortcutManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5B7FE88D7BECD242E37F73 /* Pods_ShortcutManager.framework in Frameworks */,
+				6415901FB3376BF198B40D95 /* Pods_ShortcutManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +101,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		63371EE8AB6FE41DEDA49F7D /* Pods */ = {
+		020682D349C93DAF36218691 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6171D401A8C20E1931988D71 /* Pods-ShortcutManager.debug.xcconfig */,
-				EED558E22F5BA0716A316ED7 /* Pods-ShortcutManager.release.xcconfig */,
+				7105E2B838AB720EBC5EE111 /* Pods-ShortcutManager.debug.xcconfig */,
+				C46CF513A13B942BFD04C12B /* Pods-ShortcutManager.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -116,8 +116,8 @@
 				8513629122BA87D900FA8760 /* ShortcutManager */,
 				D20C540222BB532F004FA266 /* LoginHelper */,
 				8513629022BA87D900FA8760 /* Products */,
-				63371EE8AB6FE41DEDA49F7D /* Pods */,
-				98E07B9B8A6F7528B3275212 /* Frameworks */,
+				020682D349C93DAF36218691 /* Pods */,
+				D0AF1A47D729F77D8C8682F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,10 +185,10 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		98E07B9B8A6F7528B3275212 /* Frameworks */ = {
+		D0AF1A47D729F77D8C8682F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				626A46D5C7F3B43BCCD72D41 /* Pods_ShortcutManager.framework */,
+				5A82CC2C4F97DE5D1D8366A0 /* Pods_ShortcutManager.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,12 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8513629F22BA87DA00FA8760 /* Build configuration list for PBXNativeTarget "ShortcutManager" */;
 			buildPhases = (
-				5D9B2B9288C0948025FF27B0 /* [CP] Check Pods Manifest.lock */,
+				5A94975C2955EF86A13A2005 /* [CP] Check Pods Manifest.lock */,
 				8513628B22BA87D900FA8760 /* Sources */,
 				8513628C22BA87D900FA8760 /* Frameworks */,
 				8513628D22BA87D900FA8760 /* Resources */,
-				F1AB93AB7E22B1426A5D331D /* [CP] Embed Pods Frameworks */,
 				D20C541322BB53CA004FA266 /* CopyFiles */,
+				B92618E7DE27FD4047C67799 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,7 +343,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5D9B2B9288C0948025FF27B0 /* [CP] Check Pods Manifest.lock */ = {
+		5A94975C2955EF86A13A2005 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,21 +365,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1AB93AB7E22B1426A5D331D /* [CP] Embed Pods Frameworks */ = {
+		B92618E7DE27FD4047C67799 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShortcutManager/Pods-ShortcutManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -556,7 +561,7 @@
 		};
 		851362A022BA87DA00FA8760 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6171D401A8C20E1931988D71 /* Pods-ShortcutManager.debug.xcconfig */;
+			baseConfigurationReference = 7105E2B838AB720EBC5EE111 /* Pods-ShortcutManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ShortcutManager/SupportFiles/ShortcutManager.entitlements;
@@ -579,7 +584,7 @@
 		};
 		851362A122BA87DA00FA8760 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EED558E22F5BA0716A316ED7 /* Pods-ShortcutManager.release.xcconfig */;
+			baseConfigurationReference = C46CF513A13B942BFD04C12B /* Pods-ShortcutManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ShortcutManager/SupportFiles/ShortcutManager.entitlements;

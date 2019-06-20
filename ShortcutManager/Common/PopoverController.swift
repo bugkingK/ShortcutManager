@@ -43,7 +43,6 @@ class PopoverController: NSObject {
         ]
         
         arr_items[4].state = AutoLogin.enabled ? .on : .off
-        print(AutoLogin.enabled)
         
         for item in arr_items {
             item.target = self

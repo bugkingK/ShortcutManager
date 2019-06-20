@@ -210,7 +210,7 @@
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="4ay-3t-Pbv"/>
                                         </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-3s-f3X">
-                                            <rect key="frame" x="218" y="260" width="116" height="28"/>
+                                            <rect key="frame" x="218" y="196" width="116" height="28"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="App Name" id="XoM-A4-FCQ">
                                                 <font key="font" metaFont="systemBold" size="23"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -218,18 +218,27 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fYt-EC-mJ7">
-                                            <rect key="frame" x="218" y="10" width="272" height="240"/>
-                                            <textFieldCell key="cell" selectable="YES" id="EAO-4A-aJY">
+                                            <rect key="frame" x="218" y="156" width="272" height="30"/>
+                                            <textFieldCell key="cell" selectable="YES" title="You can quickly launch your apps with a single shortcut to your favorite apps." id="EAO-4A-aJY">
                                                 <font key="font" size="12" name=".AppleSDGothicNeoI-Regular"/>
-                                                <mutableString key="title">kTranslate provides Google, Papago, and Cacao Translator with great translation capabilities. In addition, shortcut keys provide users with a convenient and smart translation environment.
-
-Pressing the default shortcut (Command + Shift + E) allows you to use various translators at any time.
-
-Forget sticky notes often or write down important things. You do not have to worry about it being stored in internal storage only.
-
-The Always button allows kTranslate to always be displayed above. Say goodbye to the tedious task of switching screens
-</mutableString>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FwI-Vy-pos">
+                                            <rect key="frame" x="218" y="48" width="101" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="p1r-vZ-tvq">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gle-qh-0jb">
+                                            <rect key="frame" x="218" y="17" width="272" height="28"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" id="bhy-Ws-Tkt">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <string key="title">If you do not check, the hotkey will not work 
+when you restart your Mac.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -237,10 +246,15 @@ The Always button allows kTranslate to always be displayed above. Say goodbye to
                                     <constraints>
                                         <constraint firstItem="N8U-qw-aAa" firstAttribute="centerY" secondItem="leq-K7-0xq" secondAttribute="centerY" id="1dp-04-mCS"/>
                                         <constraint firstItem="fYt-EC-mJ7" firstAttribute="top" secondItem="Nhh-3s-f3X" secondAttribute="bottom" constant="10" id="2re-8C-fWh"/>
+                                        <constraint firstItem="Gle-qh-0jb" firstAttribute="leading" secondItem="FwI-Vy-pos" secondAttribute="leading" id="80n-jb-qQ6"/>
                                         <constraint firstItem="Nhh-3s-f3X" firstAttribute="leading" secondItem="N8U-qw-aAa" secondAttribute="trailing" constant="20" id="Dii-WO-UGA"/>
-                                        <constraint firstItem="Nhh-3s-f3X" firstAttribute="top" secondItem="leq-K7-0xq" secondAttribute="top" constant="10" id="EPR-Y0-07p"/>
+                                        <constraint firstItem="Nhh-3s-f3X" firstAttribute="top" secondItem="N8U-qw-aAa" secondAttribute="top" id="EZI-QO-iAF"/>
+                                        <constraint firstAttribute="bottom" secondItem="FwI-Vy-pos" secondAttribute="bottom" constant="50" id="FQa-p8-C3j"/>
+                                        <constraint firstItem="Gle-qh-0jb" firstAttribute="top" secondItem="FwI-Vy-pos" secondAttribute="bottom" constant="5" id="Jof-rR-pQ4"/>
                                         <constraint firstAttribute="trailing" secondItem="fYt-EC-mJ7" secondAttribute="trailing" constant="10" id="PDZ-9l-IpF"/>
+                                        <constraint firstItem="FwI-Vy-pos" firstAttribute="leading" secondItem="Nhh-3s-f3X" secondAttribute="leading" id="gJZ-oK-1PJ"/>
                                         <constraint firstItem="fYt-EC-mJ7" firstAttribute="leading" secondItem="Nhh-3s-f3X" secondAttribute="leading" id="i4h-0X-uBb"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gle-qh-0jb" secondAttribute="trailing" constant="10" id="qAn-El-qcS"/>
                                         <constraint firstItem="N8U-qw-aAa" firstAttribute="leading" secondItem="leq-K7-0xq" secondAttribute="leading" constant="50" id="vz9-9p-GsD"/>
                                     </constraints>
                                 </view>
@@ -257,6 +271,7 @@ The Always button allows kTranslate to always be displayed above. Say goodbye to
                     </view>
                     <connections>
                         <outlet property="m_appName" destination="Nhh-3s-f3X" id="0Ux-XC-LFo"/>
+                        <outlet property="m_btnAutoLogin" destination="FwI-Vy-pos" id="i5o-RJ-bxt"/>
                     </connections>
                 </viewController>
                 <customObject id="PU2-Zd-rk1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

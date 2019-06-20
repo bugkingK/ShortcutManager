@@ -30,13 +30,20 @@ class PopoverController: NSObject {
         
         let menu = NSMenu()
         let arr_items = [
+            NSMenuItem(title: "Welcome", action: #selector(onWelcome), keyEquivalent: ""),
+            NSMenuItem.separator(),
             NSMenuItem(title: "About", action: #selector(onAbout), keyEquivalent: ""),
+            NSMenuItem.separator(),
+            NSMenuItem(title: "Auto-Login", action: #selector(onAutoLogin(_:)), keyEquivalent: ""),
             NSMenuItem.separator(),
             NSMenuItem(title: "Open ShortcutManager", action: #selector(openApp), keyEquivalent: ""),
             NSMenuItem.separator(),
             NSMenuItem(title: "Quit", action: #selector(onQuit), keyEquivalent: ""),
             NSMenuItem.separator()
         ]
+        
+        arr_items[4].state = AutoLogin.enabled ? .on : .off
+        print(AutoLogin.enabled)
         
         for item in arr_items {
             item.target = self
@@ -53,6 +60,20 @@ class PopoverController: NSObject {
         
         let windowVC = NSWindowController(window: NSWindow(contentViewController: vc))
         windowVC.showWindow(self)
+    }
+    
+    @objc public func onWelcome() {
+        guard let vc = NSStoryboard.init(name: "Settings", bundle: nil).instantiateController(withIdentifier: "Settings_Welcome") as? Settings_Welcome else {
+            return
+        }
+        
+        let windowVC = NSWindowController(window: NSWindow(contentViewController: vc))
+        windowVC.showWindow(self)
+    }
+    
+    @objc private func onAutoLogin(_ sender:NSMenuItem) {
+        AutoLogin.enabled = !AutoLogin.enabled
+        sender.state = AutoLogin.enabled ? .on : .off
     }
     
     @objc private func onQuit() {

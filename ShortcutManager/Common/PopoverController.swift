@@ -20,6 +20,9 @@ class PopoverController: NSObject {
     
     public override init() {
         super.init()
+        if AutoLogin.enabled {
+            NSApplication.shared.windows.first?.setIsVisible(false)
+        }
         
         if let button = self.statusItem.button {
             let icon = NSImage(named: .init("StatusBarButtonImage"))

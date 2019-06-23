@@ -29,11 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-    private func initUserDefaultKey(_ force:Bool = false) {
+    private func initUserDefaultKey() {
         let defaults = UserDefaults.standard
         let initKey = defaults.bool(forKey: UserDefaults_DEFINE_KEY.initKey.rawValue)
         
-        if initKey && !force {
+        if initKey {
             return
         }
         

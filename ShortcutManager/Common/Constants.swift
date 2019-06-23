@@ -27,3 +27,30 @@ extension UserDefaults {
         }
     }
 }
+
+struct AnalyticsCategory {
+    static let root = "ShortcutManager"
+    static let about = "About"
+}
+
+struct AnalyticsAction {
+    static let itself = "Itself"
+    
+    // root
+    static let launch = "Launch"
+    static let shortcut = "Shortcut"
+    static let autoLogin = "AutoLogin"
+    
+    // about
+    static let mail = "Mail"
+    static let github = "Github"
+    static let page = "Page"
+}
+
+struct AnalyticsLabel {
+    
+    // root
+    static let new = "New"
+    static let existing = "Existing"
+    
+}

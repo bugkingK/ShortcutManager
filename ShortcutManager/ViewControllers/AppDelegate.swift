@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import GoogleAnalyticsTracker
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        MPGoogleAnalyticsTracker.activate(.init(analyticsIdentifier: "UA-141906441-3"))
         PopoverController.sharedInstance()
         self.initUserDefaultKey()
     }
@@ -34,11 +36,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let initKey = defaults.bool(forKey: UserDefaults_DEFINE_KEY.initKey.rawValue)
         
         if initKey {
+            MPGoogleAnalyticsTracker.trackEvent(ofCategory: AnalyticsCategory.root, action: AnalyticsAction.launch, label: AnalyticsLabel.existing, value: 0)
             return
         }
         
         defaults.set(true, forKey: UserDefaults_DEFINE_KEY.initKey.rawValue)
         PopoverController.sharedInstance().onWelcome()
+        MPGoogleAnalyticsTracker.trackEvent(ofCategory: AnalyticsCategory.root, action: AnalyticsAction.launch, label: AnalyticsLabel.new, value: 0)
     }
 
 

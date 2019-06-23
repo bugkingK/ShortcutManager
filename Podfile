@@ -7,5 +7,6 @@ target 'ShortcutManager' do
 
   # Pods for ShortcutManager
   pod 'MASShortcut'
+  pod 'Google-Analytics-for-OS-X'
   
 end

@@ -8,6 +8,7 @@
 
 import Cocoa
 import ServiceManagement
+import GoogleAnalyticsTracker
 
 fileprivate let KEY_AUTOSTART = "launch_at_login"
 
@@ -22,6 +23,7 @@ open class AutoLogin: NSObject {
             return job?["OnDemand"] as? Bool ?? false
         }
         set {
+            MPGoogleAnalyticsTracker.trackEvent(ofCategory: AnalyticsCategory.root, action: AnalyticsAction.autoLogin, label: "\(newValue)", value: 0)
             SMLoginItemSetEnabled(id as CFString, newValue)
         }
     }

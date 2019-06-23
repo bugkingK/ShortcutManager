@@ -8,6 +8,7 @@
 
 import Cocoa
 import MASShortcut
+import GoogleAnalyticsTracker
 
 class HotKeyManager: NSObject {
     static let shared = HotKeyManager()
@@ -19,6 +20,7 @@ class HotKeyManager: NSObject {
         MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: arr_key[0], toAction: {
             NSWorkspace.shared.open(path)
         })
+        MPGoogleAnalyticsTracker.trackEvent(ofCategory: AnalyticsCategory.root, action: AnalyticsAction.shortcut, label: AnalyticsLabel.new, value: 0)
     }
     
 }

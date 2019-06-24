@@ -19,6 +19,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         MPGoogleAnalyticsTracker.activate(.init(analyticsIdentifier: "UA-141906441-3"))
         PopoverController.sharedInstance()
         self.initUserDefaultKey()
+        guard let dockDefaults = UserDefaults(suiteName: "com.apple.dock"),
+            let persistentApps = dockDefaults.array(forKey: "persistent-apps") as [AnyObject]?,
+            let bundleIDs = persistentApps.compactMap({ $0.value(forKeyPath: "tile-data.bundle-identifier") }) as? [String] else {
+                return
+        }
+//        print(persistentApps)
+        print(bundleIDs)
+        
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

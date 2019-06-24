@@ -19,6 +19,7 @@ class HotKeyManager: NSObject {
         shortcutView.associatedUserDefaultsKey = arr_key[0]
         MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: arr_key[0], toAction: {
             NSWorkspace.shared.open(path)
+            MPGoogleAnalyticsTracker.trackEvent(ofCategory: AnalyticsCategory.root, action: AnalyticsAction.shortcut, label: AnalyticsLabel.execute, value: 0)
         })
         MPGoogleAnalyticsTracker.trackEvent(ofCategory: AnalyticsCategory.root, action: AnalyticsAction.shortcut, label: AnalyticsLabel.new, value: 0)
     }

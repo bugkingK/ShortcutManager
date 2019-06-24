@@ -52,5 +52,5 @@ struct AnalyticsLabel {
     // root
     static let new = "New"
     static let existing = "Existing"
-    
+    static let execute = "Execute"
 }
